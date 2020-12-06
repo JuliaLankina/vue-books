@@ -24,7 +24,7 @@
             </div>
         </div>                       
         <div class="add-btn" v-if='books.length >= countBooksPerPage'>
-            <button @click="downloadBooksYet">Загрузить еще</button>
+            <button @click="downloadBooksYet">Загрузить еще &#10137;</button>
         </div>
     </div>
     <h3 v-else>Книг нет</h3>              
@@ -49,7 +49,7 @@ export default {
             'getBooksFromApi'
         ]),
         getCategoriesNameById(categoryId) {
-            const foundCategory = this.categories.find(element => Number(element.id) === Number(categoryId))
+            const foundCategory = this.categories.find(element => element.id === categoryId)
             return foundCategory.name 
         },
         downloadBooksYet() {
@@ -94,7 +94,6 @@ button:focus {
     justify-content: flex-start;
     margin: 10px 0 0 10px;
 }
-
 .content-item {
     position: relative;
     flex-basis: 10%;
@@ -103,7 +102,6 @@ button:focus {
     justify-content: center;
     margin-right: 2%;
 }
-
 .item-img img {
     width: 270px;
     height: 370px;
@@ -155,7 +153,6 @@ button:focus {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin: 10px;
 }
 .add-btn button {
     border: none;

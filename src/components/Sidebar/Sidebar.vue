@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header-logo">
-            <h1>books</h1>
+            <h1>&#9816;Books</h1>
         </div>
         <CategoriesList />
     </div>
@@ -18,6 +18,7 @@ export default {
 </script>
 
 <style>
+
 .header-logo {
     height: 70px;
     display: flex;

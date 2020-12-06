@@ -2,10 +2,10 @@
     <div class="header-categories" >
         <div class="header-categories-item" v-for="selected in selectedCategories" :key="selected">
             <p>
-                {{getCategoriesNameById(selected)}} <strong @click="removeSelectedCategory(selected)">&times;</strong>
+                {{getCategoriesNameById(selected)}} <strong @click="removeSelectedCategory(selected)">&#10007;</strong>
             </p>    
         </div>
-        <a class='big-btn' @click="removeAllSelected" v-if="selectedCategories.length">Убрать все</a>
+        <a class='big-btn' @click="removeAllSelected" v-if="selectedCategories.length">&#10008;</a>
     </div>               
 </template>
 
@@ -36,8 +36,9 @@ h1, p {
     margin: 0;
 }
 .header-categories {
-    height: 30px;
-    width: 100%;
+    min-height: 30px;
+    width: 80%;
+    margin-left: 0px;
     padding: 15px;
     display: flex;
     justify-content: flex-start;
@@ -45,6 +46,7 @@ h1, p {
     align-items: center;
 }
 .header-categories-item {
+    margin-top:5px;
     margin-right: 1%;
 }
 .header-categories p {
@@ -62,15 +64,17 @@ h1, p {
     position: absolute;
     margin-left: 8px; 
     top: 3px;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
 }
 .big-btn {
-    font-size: 14px;
+    background: #ed5b51;
+    font-size: 12px;
     cursor: pointer; 
     padding: 4px;
     border: .5px solid  rgb(216, 211, 211); 
     border-radius: 5px; 
+    color: white;
 }
 .big-btn:hover {
     color: white;
